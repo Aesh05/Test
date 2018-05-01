@@ -3,7 +3,8 @@ A1. Important features of JDK8 are:
     1.
 
 Q2. What is JVM and is it platform independent.
-A2. JVM is java virtual machine which is installed beforehand in the processor of every computer. Yes, it makes java platform independent. 
+A2. JVM is java virtual machine which is installed beforehand in the processor of every computer. It loads the code, verifies code, 
+     executes the code and then gives a runtime environment for it to run. Yes, it makes java platform independent. 
 
 
 Q3. What is the difference between JDK,JRE, AND JVM.
