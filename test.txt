@@ -1,0 +1,183 @@
+Q1. What are the important features of JDK8.
+A1. Important features of JDK8 are:
+    1.
+
+Q2. What is JVM and is it platform independent.
+A2. JVM is java virtual machine which is installed beforehand in the processor of every computer. Yes, it makes java platform independent. 
+
+
+Q3. What is the difference between JDK,JRE, AND JVM.
+A3. JDK- Java development kit which contains everything that is in JRE, plus tools such as the compilers and debuggers necessary for developing the applications.  
+    JRE- java runtime environment gives the user to run java codes. It saves the codes in bytecode format which further makes it a secure language. 
+         It also provdes libraries in java program.
+    JVM- Java virtual machine it is already present in the proccessors thus making java platform independent language. It stores the code, verifies it, 
+         executes it and then gives a runtime environment for it to run. 
+
+
+Q4. Which class is the super class of all the classes.
+A4. Object class is the super class of all the classes in java.
+
+
+Q5. Why java does not support multiple inheritance.
+A5. Java does not support multiple inheritance beacuse it gives rise to  the ambiguity problem. Thus multiple inheritance is done by interfaces in java. 
+
+
+
+Q6. Why java is not pure object oriented language.
+A6. It supports primitive datatype like int, char, float, boolean etc which are not objects and thus for language to be purely object oriented all user
+    defined and predefined types should be objects.
+
+Q7. Difference between overloading and over riding and can we overload main method.
+A7. Overloading- 1. Having same method name as that of the class name but different parameters are passed in it.
+                 2. Also called static binding.
+    Overriding-1. Having same method name as that of the class name but same parameters are passed in it.
+               2. Also called dynamic binding.
+
+Q8. What are the different access specifiers explain with pratical examples.
+A8. The different acces specifiers are: Public, Private and Protected.
+    Public specifiers are which make the class members and member functions accessible by all other classes.
+    Private specifiers make teh class private and only that class is able to access the members and member functions and cannot be accessed by any other class.
+    Protected is the one in which class is accessible only by subclasses of another package and not by the classes. 
+    
+Q9. What is the difference between access specifier and access modifier.
+    There is no difference between access specifier and access modifier. Both terms are basically synonymous terms to each other.
+
+Q10. What is the difference between final and static keyword.
+A10. Static:1. A keyword which allows overriding of data in a program.
+            2. It is not necessary to initialise.
+     Final: 1. A keyword which does not allow overriding of data.
+            2. It should be initialised.
+
+Q11. Can we declare a class as a static.
+A11. Yes. 
+
+
+Q12. What is the difference between abstract and interfaces.
+A12. Abstract classes: 1. Does not require creation of the object. Thus saving space in the memory.
+                       2. Cannot have multiple classes inherited all at once.
+                       3. Variable may or may not be made final.
+     Interfaces: 1. Is just used as a pattern and not used anywhere basically used for multiple inheritance in java.
+                 2. Can implement more than one class thus used for multiple inheritance.
+                 3. Variables are by default final
+
+Q13. What is wrapper classes.
+A13. The wrapper class is a class whose object wraps or contains primitive data types.
+
+Q14. What is anonymous inner class.
+A14. 
+
+
+Q15. What is ternary operator explain with examples.
+A15.  It takes three operands rather than the typical one or two that most operators use. It provides a way to shorten a simple if else block.
+      Example: public void acc()
+               int a= 20, b= 10;
+               res = x > y ? x : y;
+               System.out.println(res);
+
+
+Q16. Explain super keyword, this, garbage collection.
+A16. Super: Is a keyword used to call the base class. It is used in a derived class but first calls the base class and 
+     then calls the derived class. 
+     This: Is a keyword used to point or refer to the current object. Also can be used to invoke constructor into current constructor.
+     Garbage collection: It is a place where objects are saved in the heap memory and when not used for a long time 
+     garbage collector frees up the space in the heap memory automatically.
+
+Q17. Pass by value, pass by reference.
+A17. Passing by reference means the called member function's parameter will be the same as the caller's passed argument 
+     not the value, but the identity - the variable itself. 
+     Pass by value:
+
+
+Q18. Write a program to print duplicate elements of an array.
+
+package Test;
+
+public class Duplicate {
+	public void acc()
+	{
+	int[] a = {1,2,2,3,4,4};
+	 
+    for (int i = 0; i <a.length-1; i++)
+    {
+        for (int j = i+1; j <a.length; j++)
+        {
+            if ((a[i]==a[j]) && (i!=j))
+            {
+                System.out.println("Duplicate Element : "+a[j]);
+            }
+        }
+    }
+    }
+   
+	public static void main(String[] args) {
+		Duplicate oo=new Duplicate();
+		oo.acc();
+	}
+}
+
+Q19. Write a program to check the string is palindrome or not.
+
+Q20. Write a program to print a triangle.
+
+package Test;
+
+public class Triangle {
+
+	int i,j,k=4;
+public void acc()
+{
+	
+	for( i=0;i<5;i++)
+	{
+		for( j=0;j<k;j++)
+		{
+			System.out.print(" ");
+		}
+		k=k-1;
+			for( j=0;j<=i;j++)
+			{
+				System.out.print("* ");
+			}
+			System.out.println();	
+		}	
+	}
+	public static void main(String[] args) {
+		Triangle oo=new Triangle();
+		oo.acc();
+		
+	}
+
+}
+Q21. Write a program to print series of prime numbers from 1 to 100.
+
+package Test;
+
+public class Series {
+	
+public void acc()
+{
+	for(int i=1;i<=100;i++)
+	{
+		boolean flag=true;
+		for(int j=2;j<=i-1;j++)	
+		{
+			if(i%j==0) 
+			{
+			flag=false;
+			break;
+		}}
+		if(flag==true)
+			{
+				System.out.print(i);
+				System.out.print("\t");
+			}
+		}
+}
+	
+
+	public static void main(String[] args) {
+		Series oo=new Series();
+		oo.acc();
+       }
+      }
+
